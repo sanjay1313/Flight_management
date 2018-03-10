@@ -1,0 +1,2 @@
+insert into flight_details(flight_no,flight_name,origin,destination,departure_date,departure_time,arrival_time,total_distance,flight_duration,status)
+	values('&flight_no','&flight_name','&origin','&destination',TO_DATE('&departure_date'),'&departure_time','&arrival_time','&total_distance','&flight_duration','&status');
