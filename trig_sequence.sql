@@ -1,0 +1,10 @@
+CREATE SEQUENCE ai_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER ai_trig 
+BEFORE INSERT ON  seat_status
+FOR EACH ROW
+BEGIN
+  SELECT ai_seq.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
